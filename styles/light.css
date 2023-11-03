@@ -1,8 +1,17 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+:root.theme-light {
+  --accent-color: #ff8dcb;
+  --background-color: #fff;
+  --text-color: #353430;
+}
+
+@media (prefers-color-scheme: light) {
+
+  :root {
+    --accent-color: #ff8dcb;
+    --background-color: #fff;
+    --text-color: #353430;
+  }
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.

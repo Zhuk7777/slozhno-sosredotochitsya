@@ -1,5 +1,149 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--font, sans-serif);
+  background-color: var(--background-color);
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title-decor {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content min-content;
+  block-size: 100vh;
+  inline-size: 100%;
+}
+
+.decorated-zone {
+  margin: 10px;
+  inline-size: calc(100% - 20px);
+  block-size: calc(100% - 20px);
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header__decorated-element {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--accent-color);
+  font-weight: 400px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.header__decorated-element::after {
+  content: '';
+  display: inline-block;
+  margin-inline-start: 10px;
+  margin-inline-end: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  margin-block-start: 65px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  row-gap: 10px;
+}
+
+.header__theme-menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: var(--accent-color);
+  font-weight: 400px;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  inline-size: 70px;
+  block-size: 26px;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  margin-block-start: 65px;
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 96px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__text {
+  justify-self: end;
+  margin-block-start: 55px;
+  margin-block-end: 57px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  max-inline-size: 355px;
+}
+
+@media(min-width: 768px) {
+
+  .decorated-zone {
+    margin: 20px;
+    inline-size: calc(100% - 40px);
+    block-size: calc(100% - 40px);
+  }
+
+  .header__theme-menu {
+    margin-block-start: 172px;
+  }
+
+  .header__title {
+    margin-inline-start: -20px;
+    margin-block-start: 173px;
+  }
+  
+  .header__text {
+    margin-block-start: 162px;
+    margin-block-end: 163px;
+    max-inline-size: 364px;
+  }
 }
