@@ -1,6 +1,7 @@
 :root.theme-dark {
   --accent-color: #ff0070;
   --background-color: #000028;
+  --background-image: url(../images/cover-image-dark.png);
   --text-color: #f1b2ce;
   --title-color: #db00ff;
 }
@@ -8,8 +9,4 @@
 .page.theme_dark {
   background-color: var(--background-color);
   background-image: url(../images/cover-image-dark.png);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }

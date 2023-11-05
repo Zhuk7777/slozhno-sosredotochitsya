@@ -1,7 +1,14 @@
 :root.theme-light {
   --accent-color: #ff8dcb;
   --background-color: #fff;
+  --background-image: url(../images/cover-image-light.png);
   --text-color: #353430;
+  --title-color: #ff8dcb;
+}
+
+.page.theme_light {
+  background-image: var(--background-image);
+  background-color: var(--background-color);
 }
 
 @media (prefers-color-scheme: light) {
@@ -9,13 +16,14 @@
   :root {
     --accent-color: #ff8dcb;
     --background-color: #fff;
+    --background-image: url(../images/cover-image-light.png);
     --text-color: #353430;
+    --title-color: #ff8dcb;
   }
 }
 
-.page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+
+.theme_light .title-decor {
+  color: var(--background-color);
+  background-color: var(--accent-color);
 }
