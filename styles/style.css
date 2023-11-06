@@ -1,7 +1,7 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   font-family: var(--font, sans-serif);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -9,8 +9,8 @@
 }
 
 .title-decor {
-  color: var(--background-color);
-  background-color: var(--accent-color);
+  color: var(--title-decor-color);
+  background-color: var(--title-decor-background-color);
 }
 
 .title {
@@ -60,12 +60,16 @@
   position: absolute;
   top: 0;
   right: 0;
-  display: flex;
+  display: var(--decorated-element-visibility);
   align-items: center;
   color: var(--accent-color);
   font-weight: 400px;
   font-size: 18px;
   line-height: 25px;
+}
+
+.header__decorated-element:before {
+  content: 'REC';
 }
 
 .header__decorated-element::after {
@@ -103,18 +107,31 @@
   line-height: 18px;
   text-transform: lowercase;
   background-color: transparent;
+  cursor: pointer;
   inline-size: 70px;
   block-size: 26px;
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-color);
+}
+
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
   pointer-events: none;
 }
 
 .header__title {
   align-self: end;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 #ff0070;
 }
 
 .header__subtitle {
@@ -138,7 +155,7 @@
 }
 
 .information-block__title {
-  color: var(--accent-color);
+  color: var( --subtitle-color);
   font-weight: 700;
   font-size: inherit;
   line-height: inherit;
@@ -159,7 +176,7 @@
 
 .topic__title {
   margin-block-end: 10px;
-  color: var(--background-color);
+  color: var(--title-decor-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -175,8 +192,21 @@
 
 .topic__link {
   display: inline-block;
+  border-block-end: 1px solid transparent;
   text-decoration: none;
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: 2px 1px 0 var( --link-color);
+}
+
+.topic__link:focus {
+  outline: none;
+}
+
+.topic__link:focus-visible {
+  border: 1px solid var(--text-color);
+}
+
+.topic__link:hover {
+  border-color: var(--text-color);
 }
 
 .images {
@@ -205,7 +235,7 @@
 }
 
 .footer__title {
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 #ff0070;
 }
 
 @media(min-width: 768px) {

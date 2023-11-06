@@ -1,12 +1,13 @@
-:root.theme-dark {
+:root .theme_dark {
   --accent-color: #ff0070;
   --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
   --text-color: #f1b2ce;
   --title-color: #db00ff;
-}
-
-.page.theme_dark {
-  background-color: var(--background-color);
-  background-image: url(../images/cover-image-dark.png);
+  --hover-color: #ff99c6;
+  --title-decor-background-color: #ff0070;
+  --title-decor-color: #000028;
+  --subtitle-color: #ff0070;
+  --decorated-element-visibility: flex;
+  --link-color: #ff0070;
 }
