@@ -4,7 +4,8 @@
   --background-image: url(../images/cover-image-dark.png);
   --text-color: #f1b2ce;
   --title-color: #db00ff;
-  --hover-color: #ff99c6;
+  --title-shadow-color: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
   --title-decor-background-color: #ff0070;
   --title-decor-color: #000028;
   --subtitle-color: #ff0070;

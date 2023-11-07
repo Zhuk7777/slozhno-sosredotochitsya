@@ -4,6 +4,7 @@
   --background-image: url(../images/cover-image-light.png);
   --text-color: #353430;
   --title-color: #ffc2e6;
+  --title-shadow-color: #ff8dcb;
   --hover-color: #adadab;
   --title-decor-background-color: #ff8dcb;
   --title-decor-color: #353430;
@@ -20,11 +21,20 @@
     --background-image: url(../images/cover-image-light.png);
     --text-color: #353430;
     --title-color: #ffc2e6;
+    --title-shadow-color: #ff8dcb;
     --hover-color: #adadab;
     --title-decor-background-color: #ff8dcb;
     --title-decor-color: #353430;
     --subtitle-color: #353430;
     --decorated-element-visibility: none;
     --link-color: #ff8dcb;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  :root,
+  :root .theme_light {
+    --title-shadow-color: #ff0070;
   }
 }
